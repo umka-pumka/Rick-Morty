@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  /* background-image: url('https://static.sobaka.ru/images/image/01/16/32/40/_normal.jpg?v=1565776559'); */
+  background-size: cover; /* Заполнение всего экрана */
+  background-position: center; /* Центрирование */
+  background-attachment: fixed; /* Фиксация фона при прокрутке */
+  font-family: Arial, sans-serif; /* Шрифт по умолчанию */
+  color: white; /* Цвет текста */
+}
+
+.character-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1.5rem; 
+  padding: 1.5rem;
+}
+
+.card {
+  display: flex;
+  background-color: #282828;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #ffffff;
+  overflow: hidden;
+  transition: transform 0.2s;
+  max-height: 200px;
+}
+
+.card img {
+  width: 150px; 
+  height: auto;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.info {
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .character-list {
+    grid-template-columns: 1fr; 
+  }
+}
